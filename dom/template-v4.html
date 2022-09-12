@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p> {{ titulo }} </p>
+    <p> {{ saudacao() }} </p>
+    <a v-bind:href="link"> Google </a> <!-- quando tiver a diretiva "v-bind" nao precisamos usar {{}} -->
+</div>                                 <!-- oq é uma diretiva? uma propriedade personalizada, que nao é nativa no HTML -->
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS',
+            link: 'http://google.com.br'
+        },
+        methods: {
+            saudacao () {
+                const mensagem = 'amo VueJS!'
+                return mensagem
+            }
+        }
+    }) 
+</script>
+
