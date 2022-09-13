@@ -2,6 +2,8 @@
 
 <div id="app">
     <p> {{ contador }} </p>
+    <p> {{ 1 + 1 - 100 * 2 }} </p>
+    <p> {{ contador > 10 ? 'Maior do que 10' : 'Menor do que 10' }} </p>
     <button v-on:click="somar"> Somar 1 </button>
 </div>
 
@@ -9,12 +11,13 @@
     new Vue({
         el: '#app',
         data: {
-            contador: 0
+            contador: 0,
         },
         methods: {
-            somar () {
-                this.contador++
-            }
+            somar (passo, event) {
+                this.contador ++
+            },
+            
         }
     })
 </script>
